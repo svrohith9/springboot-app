@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "71f54d8f-7a9a-4828-887f-ac42ae15f5c6",
+		"name": "springboot-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13991953"
+	},
+	"item": [
+		{
+			"name": "Save Submissions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"John Doe\",\n  \"date\": \"2022-10-31\",\n  \"column1\": \"Value 1\",\n  \"column2\": 42,\n  \"column3\": \"Value 3\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/submission",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"submission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Data | Filtered Submissions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/submission",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"submission"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Don",
+							"disabled": true
+						},
+						{
+							"key": "column1",
+							"value": "Value 1",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "John Doe2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Submission",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"id\": \"7112d4b4-d567-42cb-8b11-e90e10c9cd08\",\n        \"name\": \"Johnson\",\n        \"date\": \"2022-12-01\",\n        \"column1\": \"New Value\",\n        \"column2\": 50,\n        \"column3\": \"Updated Value2\"\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/submission",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"submission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Submission",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/submission/77d1a55f-f625-4668-abb1-5c7d71eea404",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"submission",
+						"77d1a55f-f625-4668-abb1-5c7d71eea404"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
