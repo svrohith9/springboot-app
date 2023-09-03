@@ -10,5 +10,9 @@ public interface SchoolService {
     List<School> findAllSchools();
 
     Optional<School> findSchoolById(Long schoolId);
+    School createSchool(School newSchool);
 
+    School updateSchool(School updatedSchool);
+
+    boolean deleteSchoolById(Long schoolId);
 }

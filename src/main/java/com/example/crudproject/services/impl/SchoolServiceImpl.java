@@ -29,4 +29,26 @@ public class SchoolServiceImpl implements SchoolService {
     public Optional<School> findSchoolById(Long schoolId) {
         return schoolRepository.findById(schoolId);
     }
+
+    @Override
+    public School createSchool(School newSchool) {
+        return schoolRepository.save(newSchool);
+    }
+
+    @Override
+    public School updateSchool(School updatedSchool) {
+        return schoolRepository.save(updatedSchool);
+    }
+
+    @Override
+    public boolean deleteSchoolById(Long schoolId) {
+        Optional<School> schoolToDelete = schoolRepository.findById(schoolId);
+
+        if (schoolToDelete.isPresent()) {
+            schoolRepository.delete(schoolToDelete.get());
+            return true;
+        }
+
+        return false;
+    }
 }
