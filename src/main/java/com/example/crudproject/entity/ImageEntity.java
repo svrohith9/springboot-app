@@ -18,7 +18,7 @@ public class ImageEntity {
     private String name;
 
     @Lob
-    @Column(name = "image", columnDefinition="BLOB")
+    @Column(name = "image")
     private byte[] image;
 
     @Column(name = "upload_date")
@@ -28,3 +28,4 @@ public class ImageEntity {
     @Column(name = "content_type")
     private String contentType;
 }
+

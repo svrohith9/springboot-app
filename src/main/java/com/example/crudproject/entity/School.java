@@ -1,13 +1,7 @@
 package com.example.crudproject.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.persistence.Column;
-import jakarta.persistence.OneToMany;
-
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -39,6 +33,6 @@ public class School {
     private String address;
 
     @OneToMany(mappedBy = "school")
-    // This denotes the One-to-Many relationship with Student. The "mappedBy" attribute indicates that the "school" field in Student is the owning side.
+    @JsonManagedReference  // This annotation handles the forward part of the reference.
     private List<Student> students;
 }

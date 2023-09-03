@@ -1,66 +1,37 @@
-/*
-
-CREATE TABLE images (
-                        id BIGINT AUTO_INCREMENT PRIMARY KEY,
-                        name VARCHAR(255) NOT NULL,
-                        image BLOB,
-                        upload_date TIMESTAMP,
-                        content_type VARCHAR(255)
-);
-
--- Create the school table
-CREATE TABLE school (
-                        school_id BIGINT PRIMARY KEY AUTO_INCREMENT,
-                        school_name VARCHAR(255) NOT NULL,
-                        established_year INT NOT NULL,
-                        principal_name VARCHAR(255) NOT NULL,
-                        address TEXT
-);
-
--- Create the student table with a foreign key to school
-CREATE TABLE student (
-                         id BIGINT PRIMARY KEY AUTO_INCREMENT,
-                         name VARCHAR(255) NOT NULL,
-                         age INT NOT NULL,
-                         school_id BIGINT,
-                         FOREIGN KEY (school_id) REFERENCES school(school_id)
-);
-
-
---  show tables
 -- Inserting data into the school table
-INSERT INTO school (school_name, established_year, principal_name, address) VALUES
-                                                                                ('Prestige International School', 2005, 'Mr. Alan Smith', '123 Prestige Road, Cityville'),
-                                                                                ('Greenwood High', 1999, 'Mrs. Jessica Alba', '456 Greenwood Street, Townsville'),
-                                                                                ('Harmony Public School', 2010, 'Mr. Mike Ross', '789 Harmony Avenue, Riverside'),
-                                                                                ('Sunrise Elementary', 1995, 'Ms. Rachel Zane', '101 Sunrise Blvd, Mountainville'),
-                                                                                ('Hilltop Academy', 2008, 'Dr. Louis Litt', '202 Hilltop Lane, Valleyville');
+INSERT INTO school (school_name, established_year, principal_name, address)
+VALUES
+    ('Greenwood High', 1995, 'John Smith', '123 Maple St, Cityville'),
+    ('Riverside Academy', 2000, 'Jane Doe', '456 Pine Rd, Townsville'),
+    ('Sunshine Public School', 1985, 'Samuel Brown', '789 Cedar Ave, Lakedale'),
+    ('Starlight International', 2002, 'Emma Watson', '101 Oak Lane, Hilltop'),
+    ('Blue Mountain Elementary', 1990, 'Robert White', '202 Birch Blvd, Foresttown'),
+    ('Moonbeam Kindergarten', 2005, 'Lily Green', '303 Spruce Way, Meadowland'),
+    ('Oceanside Secondary', 1988, 'Ethan Grey', '404 Palm Pkwy, Beachside'),
+    ('Golden Gate Prep', 1992, 'Sophia Black', '505 Redwood Rte, Bridgetown'),
+    ('Diamond District School', 2001, 'Michael Silver', '606 Elm Expy, Crystalcity'),
+    ('Cosmic Charter School', 1998, 'Ava Purple', '707 Fir Freeway, Starstate');
 
 -- Inserting data into the student table
--- Assuming the school IDs generated were 1 to 5 respectively:
-INSERT INTO student (name, age, school_id) VALUES
-                                               ('John Doe', 15, 1),
-                                               ('Jane Doe', 14, 1),
-                                               ('Alice Johnson', 16, 2),
-                                               ('Bob Brown', 15, 2),
-                                               ('Charlie Clark', 17, 2),
-                                               ('Diana Prince', 16, 3),
-                                               ('Edward Cullen', 17, 3),
-                                               ('Fiona Apple', 14, 4),
-                                               ('George Best', 15, 4),
-                                               ('Hannah Montana', 14, 4),
-                                               ('Ian Somerhalder', 16, 5),
-                                               ('Jill Valentine', 15, 5),
-                                               ('Kevin Hart', 17, 5),
-                                               ('Lana Kane', 16, 1),
-                                               ('Maria Hill', 17, 1),
-                                               ('Ned Stark', 16, 2),
-                                               ('Oscar Wilde', 17, 3),
-                                               ('Pam Beesly', 16, 4),
-                                               ('Quincy Adams', 15, 5),
-                                               ('Rita Ora', 17, 1);
-
-*/
-
--- select * from STUDENT
-show tables
+INSERT INTO student (name, age, school_id)
+VALUES
+    ('Alice Johnson', 15, 1),
+    ('Bob Williams', 14, 1),
+    ('Charlie Brown', 15, 2),
+    ('David Wilson', 16, 2),
+    ('Eve Davis', 17, 3),
+    ('Frank White', 18, 3),
+    ('Grace Miller', 14, 4),
+    ('Harry Smith', 16, 4),
+    ('Ivy Clark', 15, 5),
+    ('Jack Taylor', 14, 5),
+    ('Kathy Martin', 15, 6),
+    ('Louis Allen', 16, 6),
+    ('Monica King', 17, 7),
+    ('Nathan Hall', 18, 7),
+    ('Olivia Adams', 14, 8),
+    ('Paul Young', 16, 8),
+    ('Quincy Scott', 15, 9),
+    ('Rachel Lee', 14, 9),
+    ('Steve Green', 17, 10),
+    ('Tiffany Lewis', 18, 10);
