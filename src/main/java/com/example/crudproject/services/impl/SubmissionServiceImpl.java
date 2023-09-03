@@ -1,7 +1,7 @@
-package com.example.crudproject.serviceImpl;
+package com.example.crudproject.services.impl;
 
-import com.example.crudproject.dto.Submission;
-import com.example.crudproject.dto.SubmissionResponse;
+import com.example.crudproject.dto.requests.Submission;
+import com.example.crudproject.dto.response.SubmissionResponse;
 import com.example.crudproject.services.SubmissionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

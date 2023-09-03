@@ -1,5 +1,6 @@
-package com.example.crudproject.dto;
+package com.example.crudproject.dto.response;
 
+import com.example.crudproject.dto.requests.Submission;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

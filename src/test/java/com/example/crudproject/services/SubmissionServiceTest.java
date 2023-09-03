@@ -2,8 +2,8 @@ package com.example.crudproject.services;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import com.example.crudproject.dto.Submission;
-import com.example.crudproject.dto.SubmissionResponse;
+import com.example.crudproject.dto.requests.Submission;
+import com.example.crudproject.dto.response.SubmissionResponse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

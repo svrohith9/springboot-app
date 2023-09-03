@@ -1,7 +1,7 @@
 package com.example.crudproject.services;
 
-import com.example.crudproject.dto.Submission;
-import com.example.crudproject.dto.SubmissionResponse;
+import com.example.crudproject.dto.requests.Submission;
+import com.example.crudproject.dto.response.SubmissionResponse;
 import org.springframework.util.MultiValueMap;
 
 import java.util.List;

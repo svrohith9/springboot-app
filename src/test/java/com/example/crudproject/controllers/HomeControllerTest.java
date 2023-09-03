@@ -1,7 +1,7 @@
 package com.example.crudproject.controllers;
 
-import com.example.crudproject.dto.Submission;
-import com.example.crudproject.dto.SubmissionResponse;
+import com.example.crudproject.dto.requests.Submission;
+import com.example.crudproject.dto.response.SubmissionResponse;
 import com.example.crudproject.services.SubmissionService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

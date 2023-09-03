@@ -1,4 +1,4 @@
-package com.example.crudproject.dto;
+package com.example.crudproject.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;

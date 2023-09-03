@@ -1,6 +1,6 @@
 package com.example.crudproject.controllers;
 
-import com.example.crudproject.dto.ImageEntity;
+import com.example.crudproject.entity.ImageEntity;
 import com.example.crudproject.repository.ImageRepository;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.core.io.Resource;
